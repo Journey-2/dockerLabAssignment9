@@ -5,7 +5,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    def image = docker.build("assignment9-Image:1.0")
+                    def image = docker.build("assignment9-image:1.0")
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    sh 'docker run -d --name assignment9-Containerassignment9-Image:1.0'
+                    sh 'docker run -d --name assignment9-Containerassignment9-image:1.0'
                 }
             }
         }
